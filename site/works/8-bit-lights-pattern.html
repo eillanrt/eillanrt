@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Allan Robert Tan's personal website">
+    <meta name="author" content="Allan Robert Tan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eillanrt.pages.dev/thoughts/why-you-may-want-to-start-a-blog-like-its-2012.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eillanrt.pages.dev/">
+    <meta property="og:title" content="Allan Robert Tan">
+    <meta property="og:description" content="Allan Robert Tan's personal website">
+    <meta property="og:image" content="https://eillanrt.pages.dev/images/cover.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://eillanrt.pages.dev/">
+    <meta name="twitter:title" content="Allan Robert Tan">
+    <meta name="twitter:description" content="Allan Robert Tan's personal website">
+    <meta name="twitter:image" content="https://eillanrt.pages.dev/images/cover.jpg">
+    
+    <title>8-bit lights Pattern - Allan Robert Tan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .nav-wrapper nav {
+            justify-content: left;
+            font-size: 1.2rem;
+            align-items: center;
+        }
+
+        .back-from-item-wrapper {
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav-wrapper">
+            <nav>
+                <div class="back-from-item-wrapper">
+                    <a href="../works.html#academic-works">Go back</a>
+                </div>
+            </nav>
+        </div>
+        <main class="content-wrapper">
+                <header>
+                    <h1 class="content-title">8-bit lights Pattern</h1>
+                    <!-- 
+                      In case I need subtitles
+                      <h2 class="content-subtitle">This is what a subtitle looks like.</h2>
+                    -->
+                </header>
+                <hr>
+                <div class="content-text">
+                    <div class="img-wrapper">
+                        <img  src="../images/light_pattern_8086.gif" alt="8 LEDs on PCB making a light pattern">
+                    </div>
+                    <h1>About</h1>
+                    <p>
+                        I designed my custom lights pattern with 8 LEDs.
+                        Once a desired pattern was chosen, I mapped the light patterns into binary.
+                        Where each bit represents an <code>ON</code> or <code>OFF</code> active high state on its corresponding LED.
+                        The computer runs a program written in 8086 Assembly that outputs signals every delay time to the output port via the DB25,
+                        which then the signals are transmitted to the PCB with LEDs simultaneously.
+                    </p>
+                </div>    
+        </main>
+        <p class="back-to-top">
+            <a href="#">Scroll to top</a>
+        </p>
+        <footer>
+            <p>&copy; 2026 Allan Robert Tan</p>
+        </footer>
+    </div>
+</body>
+
+</html>

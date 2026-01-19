@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Allan Robert Tan's personal website">
+    <meta name="author" content="Allan Robert Tan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eillanrt.pages.dev/thoughts/why-you-may-want-to-start-a-blog-like-its-2012.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eillanrt.pages.dev/">
+    <meta property="og:title" content="Allan Robert Tan">
+    <meta property="og:description" content="Allan Robert Tan's personal website">
+    <meta property="og:image" content="https://eillanrt.pages.dev/images/cover.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://eillanrt.pages.dev/">
+    <meta name="twitter:title" content="Allan Robert Tan">
+    <meta name="twitter:description" content="Allan Robert Tan's personal website">
+    <meta name="twitter:image" content="https://eillanrt.pages.dev/images/cover.jpg">
+    
+    <title>7400-series IC Checker - Allan Robert Tan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .nav-wrapper nav {
+            justify-content: left;
+            font-size: 1.2rem;
+            align-items: center;
+        }
+
+        .back-from-item-wrapper {
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav-wrapper">
+            <nav>
+                <div class="back-from-item-wrapper">
+                    <a href="../works.html#academic-works">Go back</a>
+                </div>
+            </nav>
+        </div>
+        <main class="content-wrapper">
+                <header>
+                    <h1 class="content-title">7400-series IC Checker</h1>
+                    <!-- 
+                      In case I need subtitles
+                      <h2 class="content-subtitle">This is what a subtitle looks like.</h2>
+                    -->
+                </header>
+                <hr>
+                <div class="content-text">
+                    <h1>About</h1>
+                    <p>
+                        This project was done by a group of 4.
+                        This project required us to design our own circuit board to hold the IC.
+                        We were also tasked to write an 8086 Assemby Code to drive the electrical signal between the circuit board and the computer, utilizing male DB25 to allow parallel data transmission.
+                        We used a specific type of computer our professor had. Unfortunately, we were not able to get the specification of the computer.
+                        We had to boot freeDOS into the computer from a flash drive with tasm and tlink binaries to execute our 8086 Assembly program.
+                        I was primarily assigned in the software interfacing and programming process, but I also contributed in the design and implementation process.
+                    </p>
+
+                    <h1>Design Objectives</h1>
+                    <p>
+                        The computer will send signals to the IC's input pins via the parallel port.
+                        As the IC receives the signals, each of the IC's output pin will output its signal.
+                        The output signals will then be sent back to the computer via the parallel port.
+                        The 8086 program then checks if the IC's output signals match with its expectation.
+                        The 8086 program should print a test table on the terminal, comparing each output pins' output from their respected expected signal output.
+                        If one of the output pins sends an incorrect signal (e.g., <code>0</code> instead of <code>1</code>),
+                        then it will label the IC <code>Defective</code>. <code>Passed</code>, if otherwise.
+                    </p>
+
+                    <blockquote>
+                        <strong>8086 program</strong>: I will send the signals, you should give me back the value I expect.<br>
+                        <strong>IC</strong>: Okay. I received the signals. Here is the output. I'll send it back to you.<br>
+                        <strong>8086 program</strong>: Output signals received. I will print a test table to compare if you gave the signals I expect with respect to what kind of IC you are.
+                    </blockquote>
+
+                    <h2>The program should output something like:</h2>
+                    <p><strong>Testing 7408 IC (AND Gate)</strong></p>
+                    <table>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>Exp</th>
+                            <th>Pin 1</th>
+                            <th>Pin 2</th>
+                            <th>Pin 3</th>
+                            <th>Pin 4</th>
+                        </tr>
+                        <tr>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                        </tr>
+                        <tr>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>1</th>
+                            <th>1</th>
+                            <th>1</th>
+                            <th>1</th>
+                            <th>1</th>
+                            <th>1</th>
+                        </tr>
+                    </table>
+                    <ul>
+                        <li>Pin 1 PASSED</li>
+                        <li>Pin 2 PASSED</li>
+                        <li>Pin 3 PASSED</li>
+                        <li>Pin 4 PASSED</li>
+                    </ul>
+                    <p><strong>RESULT</strong>: IC is not Defective</p>
+
+                    <h1>Challenge</h1>
+                    <p>
+                        The main challenge we faced in this project is handling the 7404 (NOT Gate). Which has 6 output pins.
+                        2-input ICs (e.g., 7432 for OR, 7408 for AND) have 4 output pins.
+                        DB25 only has 5 input pins. If those input pins were already used for the 4-output ICs, we only had one input pin left for the 7404 IC.
+                        We had to find a way to bypass this limitation using our knowledge in Digital Electronics.
+                    </p>
+                </div>
+        </main>
+        <p class="back-to-top">
+            <a href="#">Scroll to top</a>
+        </p>
+        <footer>
+            <p>&copy; 2026 Allan Robert Tan</p>
+        </footer>
+    </div>
+</body>
+
+</html>
