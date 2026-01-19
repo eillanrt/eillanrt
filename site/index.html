@@ -3,76 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Allan Robert Tan's personal website">
+    <meta name="author" content="Allan Robert Tan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eillanrt.pages.dev/index.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eillanrt.pages.dev/">
+    <meta property="og:title" content="Allan Robert Tan">
+    <meta property="og:description" content="Allan Robert Tan's personal website">
+    <meta property="og:image" content="https://eillanrt.pages.dev/images/cover.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://eillanrt.pages.dev/">
+    <meta name="twitter:title" content="Allan Robert Tan">
+    <meta name="twitter:description" content="Allan Robert Tan's personal website">
+    <meta name="twitter:image" content="https://eillanrt.pages.dev/images/cover.jpg">
+
+    <title>Allan Robert Tan</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <title>Allan Robert Tan</title>
-    <style>
-        /* A basic CSS reset snippet */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            /* Ensures padding and borders are included in element's total width/height */
-        }
-        html {
-            font-size: 16px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100dvh;
-            font-family: "Google Sans", sans-serif;
-        }
-
-        .wrapper {
-            width: 420px;
-        }
-
-        .wrapper p{
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-
-        .wrapper h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        /* Optional: Additional modern resets might include this for image responsiveness */
-        img,
-        picture,
-        video,
-        canvas,
-        svg {
-            display: block;
-            max-width: 100%;
-        }
-
-        @media only screen and (max-width: 460px) {
-            .wrapper {
-                width: 90%;
-            }
-        }
-    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>UNDER CONSTRUCTION</h1>
-        <p>This page will be available soon...<br />For now you can visit my <a href="https://eillanrt.github.io">blog</a>.</p>
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="./index.html" style="font-weight: bold;" title="Home">Home</a></li>
+                    <li><a href="./projects.html" title="Projects">Projects</a></li>
+                    <li><a href="./thoughts.html" title="Thoughts">Thoughts</a></li>
+                    <li><a href="./about.html" title="About">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="content-wrapper">
+                <header>
+                    <h1 class="content-title">Home</h1>
+                    <!-- 
+                      In case I need subtitles
+                      <h2 class="content-subtitle">This is what a subtitle looks like.</h2>
+                    -->
+                </header>
+                <hr>
+                <div class="content-text">
+                    <h1>Hi!</h1>
+                    <p>
+                        I am Allan Robert Tan, an undergrad Computer Engineering student. I am focusing on my studies right now, exploring the possibilities of software and silicon.
+                        Beyond software, our curriculum gives emphasis on Embedded Systems, Programmable logic devices with HDL, and Computer Architecture.
+                        Equipping students not just with knowledge but also with experience through practical training and strategic pedegogy.
+                        I have skills in Computer Programming, with experience in Python and C++. I also find myself proficient in Git, Web Development, and the Linux OS. 
+                        I am always willing to learn on how to solve problems. Whether it's a tech stack, an electronic datasheet, or even life itself.
+                    </p>
+                    <h1>Links</h1>
+                    <ul>
+                        <li><a href="https://github.com/eillanrt">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/argtan">LinkedIn</a></li>
+                    </ul>
+                </div>
+        </main>
+        <footer>
+            <p>&copy; 2026 Allan Robert Tan</p>
+        </footer>
     </div>
 </body>
 
