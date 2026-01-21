@@ -491,6 +491,10 @@ nav li {
         width: 90%;
     }
 
+    .content-text {
+      width: 100%;
+    }
+
   .brainmade-logo-wrapper {
         width: 50%;
   }
