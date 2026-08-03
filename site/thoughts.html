@@ -89,7 +89,7 @@
                         posts.forEach(post => {
                             let cleanDescription;
 
-                            if (post.description.length > 150) cleanDescription = post.description.substring(0, 150);
+                            if (post.description.length > 150) cleanDescription = post.description.substring(0, 150) + '...';
                             else cleanDescription = post.description;
 
                             const li = document.createElement('li');
