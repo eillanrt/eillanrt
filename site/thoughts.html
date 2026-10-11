@@ -53,7 +53,13 @@
                 <hr>
                 <div class="content-text">
                     <h1 id="articles">Recent Blog posts</h1>
+                    <noscript>
+                        <p style="color: red;">JavaScript is disabled in your browser. Please enable JavaScript to view the blog posts.</p>
+                    </noscript>
                     <ul class="blog-posts-ul">
+                        <li class="thought-item">
+                            <p>Loading blog posts...</p>
+                        </li>
                         <!--
                         <li class="thought-item">
                             <a href="./thoughts/why-did-I-start-a-personal-blog-like-its-2012.html">
@@ -84,6 +90,7 @@
                 throw new Error('Response from apiUrl is not ok');
                 }).then(data => {
                     if (data.status === 'ok') {
+                        blogPostUl.innerHTML = ''; 
                         const posts = data.items.slice(0, 6);
 
                         posts.forEach(post => {
@@ -102,6 +109,9 @@
                             blogPostUl.appendChild(li);
                         });
                     }
+                }).catch(err => {
+                    console.error('Error fetching RSS feed:', err);
+                    blogPostUl.innerHTML = '<li class="thought-item" style="color: red;"><p>Unable to load blog posts at this time. Please try again later.</p></li>';
                 });
             });
 
